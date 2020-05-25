@@ -12,11 +12,14 @@ sudo: false
 
 language: python
 
-matrix:
+jobs:
   fast_finish: true
   exclude:
-    - env: TRAVIS_PYTHON_VERSION=2.7 REQUIREMENTS=lowest
-    - env: TRAVIS_PYTHON_VERSION=2.7 REQUIREMENTS=devel
+    - python: 2.7
+      env: REQUIREMENTS=lowest
+    - python: 2.7
+      env: REQUIREMENTS=devel
+
 
 cache:
   - pip
